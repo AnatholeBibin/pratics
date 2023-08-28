@@ -7,7 +7,7 @@ stage ('Build image'){
   app = docker.build("monimage_script")
 }
 stage ('Run image' )
-  docker.image(*monimage_script*).withRun('-p 5000:5000"){c->
+  docker.image('monimage_script').withRun('-p 5000:5000"){c->
   sh 'docker ps'
   sh 'curl localhost'
 }

@@ -3,7 +3,7 @@ pipeline{
   stages {
       stage('Clone'){
         steps{
-          sh "git clone "
+          sh "git clone https://github.com/AnatholeBibin/pratics.git"
       }
       }
       stage ('build'){
